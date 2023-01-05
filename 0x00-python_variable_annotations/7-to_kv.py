@@ -1,20 +1,14 @@
 #!/usr/bin/env python3
-"""
-    Mixed Tuple
-"""
-from typing import Union, Tuple
+'''
+Complex types - string and int/float to tuple
+'''
+from typing import Tuple, Union
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """
-        Args:
-            k: String
-            v: Union: Can be int or float
-        Return:
-            Tuple with string and int or float
-    """
-
-    cncat: Tuple(str, Union[int, float])
-    cncat = (k, v**2)
-
-    return cncat
+    '''
+    Tuple typing
+    '''
+    result: Tuple(str, Union[int, float])
+    result = (k, v**2)
+    return result
