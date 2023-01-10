@@ -8,9 +8,11 @@ wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
 def measure_time(n: int, max_delay: int) -> float:
-    """ Measure the runtime """
-    start_time = time.time()
+    '''Rem to use asyncio to run the wait_in
+    Because wait_n is a coroutine
+    '''
+    start = time.time()
     asyncio.run(wait_n(n, max_delay))
-    end_time = time.time()
-    total_time = end_time - start_time
+    end = time.time()
+    total_time = start - end
     return total_time / n
