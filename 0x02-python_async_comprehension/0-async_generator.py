@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 ''' Async Generator '''
 import asyncio
-import random
+from random import uniform
 from typing import Generator
 
 
 async def async_generator() -> Generator[float,None, None]:
     ''' Generator '''
-    for i in random.uniform(0, 10):
-        yield i
+    for _ in range(10):
+        yield uniform(0, 10)
         await asyncio.sleep(1)
