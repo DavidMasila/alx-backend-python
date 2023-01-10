@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-'''Measuring run time'''
+'''
+Measuring run time
+'''
 import asyncio
 import time
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-def measure_time(n: int, max_dalay: int) -> float:
-    '''Rem to use asyncio to run the wait_in
-    Because wait_n is a coroutine
-    '''
-    start = time.time()
-    asyncio.run(wait_n(n, max_dalay))
-    end = time.time()
-    total_time = start - end
+def measure_time(n: int, max_delay: int) -> float:
+    """ Measure the runtime """
+    start_time = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    end_time = time.time()
+    total_time = end_time - start_time
     return total_time / n
