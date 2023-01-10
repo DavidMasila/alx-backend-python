@@ -65,3 +65,6 @@ T = TypeVar('T')
 
 def get_item(lst: List[T], index: int) -> T:
     return lst[index]
+
+#donno what type is going to be in the list but assume they are going to be same type
+#We respresent the assumed all same type with the T and return it. Hopefully as same type
